@@ -1,5 +1,5 @@
 import streamlit as st
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings,  HuggingFaceInstructEmbeddings
@@ -9,6 +9,8 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 from langchain.llms import HuggingFaceHub
+
+openai_api_key = st.secrets["api_key"]["openai_api_key"]
 
 def get_pdf_text(pdf_docs):
     text = ""
@@ -62,7 +64,7 @@ def handle_userinput(user_question):
             
 def main():
       
-    load_dotenv()
+    #load_dotenv()
     st.set_page_config(page_title="Research Assistant", page_icon=":books:")
     
 
