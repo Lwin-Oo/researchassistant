@@ -1,0 +1,31 @@
+# requirements.txt
+
+# Python version (optional)
+# Specify the Python version your project is compatible with, e.g., "python==3.8"
+
+# Core Packages
+streamlit==0.0.0  # Web app framework for data science
+python-dotenv==0.19.0  # Load environment variables from a .env file
+
+# PDF Processing
+PyPDF2==1.26.0  # PDF file manipulation library
+
+# Natural Language Processing
+langchain==1.2.3  # library for NLP tasks
+
+# HTML Templates
+htmlTemplates==0.4.5  # Template library for generating HTML
+
+# Add more packages here as needed
+# package-name==version
+# another-package==another-version
+
+# Development and Testing (optional)
+# Add packages used for development, testing, or documentation here
+
+# For example:
+# - pytest==6.2.5  # Testing framework
+# - sphinx==4.2.0  # Documentation generator
+
+# Remove the following line if you don't have a specific Python version requirement
+# python-dotenv==0.19.0
