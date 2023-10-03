@@ -54,7 +54,8 @@ def get_conversation_chain(vectorstore):
     return conversation_chain
 
 def handle_userinput(user_question):
-    response = st.session_state.conversation({'question': user_question})
+    api_key = st.secrets["openai_api_key"]  # Get the API key from secrets
+    response = st.session_state.conversation({'question': user_question, 'api_key': api_key})
     st.session_state.chat_history = response['chat_history']
 
     for i, message in enumerate(st.session_state.chat_history):
