@@ -11,9 +11,8 @@ from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 from langchain.llms import HuggingFaceHub
 
-OPENAI_API_KEY = st.secrets["openai_api_key"]
 
-openai.api_key = OPENAI_API_KEY
+openai.api_key = st.secrets['OPENAI_API_KEY']
 
 def get_pdf_text(pdf_docs):
     text = ""
